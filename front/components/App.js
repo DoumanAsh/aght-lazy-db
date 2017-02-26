@@ -6,8 +6,8 @@ import Component from 'inferno-component';
 import {DB} from "./data.js";
 
 const Row = ({title, company, popup}) =>
-    <tr>
-        <td onClick={popup}>{title}</td>
+    <tr onClick={popup}>
+        <td>{title}</td>
         <td>{company}</td>
     </tr>
 ;
@@ -55,7 +55,7 @@ export default class App extends Component {
     }
 
     pop_up(self, event) {
-        const title = event.target.className === "close" ? undefined : event.target.innerHTML;
+        const title = event.target.className === "close" ? undefined : event.target.parentElement.children[0].innerHTML;
         self.setState(() => {
             return { popup_key: title };
         });
