@@ -1,0 +1,25 @@
+*
+    font-size: 20px
+    margin: 0
+    box-sizing: border-box
+
+@keyframes fly-in
+    0%
+        opacity: 0;
+        transform: translateY(-40px);
+
+    100%
+        opacity: 1;
+        transform: translateY(0);
+
+.center_box
+    animation: fly-in 1s
+    position: fixed
+    left: 35%
+    top: 35%
+    background-color: #fff
+    padding: 0.5rem
+    border-radius: 0.2rem
+    box-shadow: 3px 3px 3px 4px rgba(0, 0, 0, 0.4)
+    z-index: 3
+    padding: 1rem
