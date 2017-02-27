@@ -34,7 +34,6 @@ module.exports = {
     plugins: {
         babel: {
             presets: ['es2015'],
-            pattern: /^front\/.*\.js$/,
             plugins: ["inferno"]
         },
         stylus: {
@@ -42,7 +41,7 @@ module.exports = {
             plugins: ['autoprefixer-stylus']
         },
         eslint: {
-            pattern: /^front\/.*\.js$/,
+            pattern: /^front\/.*\.js(x)*$/,
             warnOnly: true
         },
         jade: {

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scrap-archive": "node data/scrap.js",
-    "lint": "eslint data/ front/",
+    "lint": "eslint --ext .jsx --ext .js data/ front/",
     "flow": "flow",
     "start": "brunch watch --server",
     "build": "brunch build --production"

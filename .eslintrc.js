@@ -23,6 +23,7 @@ module.exports = {
         "sourceType": "module",
         "ecmaFeatures": {
             "modules": true,
+            "jsx": true
         }
     }
 }
