@@ -1,6 +1,6 @@
 module.exports = {
     paths: {
-        watched: ['front']
+        watched: ['front', 'data']
     },
 
     files: {
@@ -20,7 +20,7 @@ module.exports = {
 
     conventions: {
         ignored: [
-            'data/**/*.*',
+            'data/**/*.js',
             '_*.*',
             'test/**/*.js'
         ],

@@ -25,6 +25,7 @@
     "babel-plugin-inferno": "*",
 
     "brunch": "*",
+    "jsony-brunch": "*",
     "auto-reload-brunch": "*",
     "autoprefixer-stylus": "*",
     "babel-brunch": "*",
@@ -33,7 +34,6 @@
     "css-brunch": "*",
     "eslint-brunch": "*",
     "jade-brunch": "*",
-    "javascript-brunch": "*",
     "rollup-brunch": "*",
     "stylus-brunch": "*",
     "uglify-js-brunch": "*"

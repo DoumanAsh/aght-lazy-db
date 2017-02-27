@@ -3,7 +3,7 @@
 import Inferno, {linkEvent} from 'inferno';
 import Component from 'inferno-component';
 
-import {DB} from "./data.js";
+import DB from "data/db.json";
 
 const Row = ({title, company, popup}) =>
     <tr onClick={popup}>
