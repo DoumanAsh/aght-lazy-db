@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "scrap-archive": "node data/scrap.js",
     "lint": "eslint --ext .jsx --ext .js data/ front/",
-    "flow": "flow",
     "start": "brunch watch --server",
     "build": "brunch build --production"
   },
@@ -18,15 +17,12 @@
   },
   "devDependencies": {
     "eslint": "^3.14.1",
-    "flow-bin": "^0.38.0",
-    "he": "^1.1.1",
 
     "eslint-plugin-inferno": "*",
     "babel-plugin-inferno": "*",
 
     "brunch": "*",
     "jsony-brunch": "*",
-    "auto-reload-brunch": "*",
     "autoprefixer-stylus": "*",
     "babel-brunch": "*",
     "babel-preset-es2015": "*",
@@ -36,6 +32,7 @@
     "jade-brunch": "*",
     "rollup-brunch": "*",
     "stylus-brunch": "*",
+    "auto-reload-brunch": "*",
     "uglify-js-brunch": "*"
   }
 }
