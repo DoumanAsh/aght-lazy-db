@@ -3,7 +3,6 @@ module.exports = {
     "rules": {
         "semi": ["error", "always"],
         "no-console": [0],
-        "no-extra-parens": ["error", "all"],
         "valid-jsdoc": ["error"],
         "complexity": ["error", 10],
         "consistent-return": "error",

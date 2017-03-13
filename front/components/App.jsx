@@ -3,43 +3,10 @@
 import Inferno, {linkEvent} from 'inferno';
 import Component from 'inferno-component';
 
+import {Row, TableHeader} from './App/Table.jsx';
+import {TitleInfo} from './App/Popup.jsx';
+
 import DB from "data/db.json";
-
-const Row = ({title, company, popup}) =>
-    <tr onClick={popup}>
-        <td>{title}</td>
-        <td>{company}</td>
-    </tr>
-;
-
-const TableHeader = ({elements}) =>
-    <tr>
-    {elements.map((element) => <th>{element}</th>)}
-    </tr>
-;
-
-const TitleInfo = ({title, close_pop}) => {
-    const data = DB[title];
-    return (
-        <div className="center_box code_info">
-            <header>{title}</header>
-            <button className="close" onClick={close_pop}>{"✖"}</button>
-            <content>
-                <p>Kanji title</p>
-                <p>{data.kanji ? data.kanji : "n/a"}</p>
-
-                <p>Company</p>
-                <p>{data.company ? data.company : "n/a"}</p>
-
-                <p>AGHT Code</p>
-                <p>{data.code ? data.code : "n/a"}</p>
-
-                <p>Notes</p>
-                <p>{data.notes ? data.notes : "n/a"}</p>
-            </content>
-        </div>
-    );
-};
 
 export default class App extends Component {
     constructor(props) {
@@ -52,6 +19,11 @@ export default class App extends Component {
         };
 
         this.event_pop_title = linkEvent(this, this.pop_up);
+
+        this._filter_title = (title) => {
+            const kanji = DB[title].kanji;
+            return this.state.filter.test(title) || (kanji && this.state.filter.test(kanji));
+        };
     }
 
     pop_up(self, event) {
@@ -75,12 +47,12 @@ export default class App extends Component {
                 </form>
 
                 {this.state.popup_key &&
-                    <TitleInfo title={this.state.popup_key} close_pop={this.event_pop_title} />
+                    <TitleInfo title={this.state.popup_key} close_pop={this.event_pop_title} data={DB[this.state.popup_key]}/>
                 }
 
                 <table>
                     <TableHeader elements={this.header} />
-                    {this.state.view.filter(title => this.state.filter.test(title)).map(title =>
+                    {this.state.view.filter(this._filter_title).map(title =>
                          <Row title={title} company={DB[title].company} popup={this.event_pop_title}/>
                     )}
                 </table>
