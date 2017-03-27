@@ -1,4 +1,24 @@
 {
+    "Amanatsu Adolesence": {
+        "code": "/HWN14*0@53519C",
+        "kanji": "甘夏アドゥレセンス",
+        "company": "Confiture Soft"
+    },
+    "Shikigami": {
+        "code": "/ks20 /HW-20*0@1950:sdl_ttf.dll",
+        "kanji": "シキガミ",
+        "company": "Akabei Soft2 TRY"
+    },
+    "Silverio Trinity": {
+        "code": "/HWN-4:-C@25D5CE:malie.exe",
+        "kanji": "シルヴァリオトリニティ",
+        "company": "Light"
+    },
+    "Koiiro Soramoyou": {
+        "code": "/HA8@CF670:koisora_main.exe",
+        "kanji": "恋色空模様",
+        "company": "Studio Ryokucha"
+    },
     "Shishunki": {
         "code": "/HANC@5BF20:TITLE2_D.BIN /C40"
     },
