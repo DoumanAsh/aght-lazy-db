@@ -1,6 +1,12 @@
 "use strict";
 
 import Inferno from 'inferno';
-import App from './components/App.jsx';
+import AghtDbView from './components/AghtDbView.jsx';
 
-Inferno.render(<App />, document.body.children[0]);
+import { Provider } from 'inferno-mobx';
+import * as Store from './stores/Codes.js';
+
+Inferno.render(<Provider DbStore={Store.db} DbView={Store.view}>
+    <AghtDbView />
+</Provider>,
+document.body.children[0]);

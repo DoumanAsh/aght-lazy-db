@@ -1,6 +1,20 @@
+const path = require('path');
+const blaze_download = require('./ci/blaze_download.js');
+const blaze_css = [
+    "components.tables.min.css",
+    "components.inputs.min.css",
+    "objects.modals.min.css",
+    "components.cards.min.css",
+    "components.overlays.min.css",
+    "components.buttons.min.css",
+    "components.headings.min.css",
+    "components.badges.min.css",
+    "generics.global.min.css"
+];
+
 module.exports = {
     paths: {
-        watched: ['front', 'data']
+        watched: ['front', 'data', 'vendor']
     },
 
     files: {
@@ -9,7 +23,8 @@ module.exports = {
         },
         stylesheets: {
             joinTo: {
-                'style.css': /^front/
+                'style.css': /^front/,
+                'vendor.css': /^vendor/
             }
         }
     },
@@ -31,6 +46,12 @@ module.exports = {
         ],
     },
 
+    hooks: {
+        preCompile: function() {
+            blaze_download(blaze_css, path.join(__dirname, 'vendor', 'styles'));
+        }
+    },
+
     plugins: {
         babel: {
             presets: ['es2015'],
@@ -43,6 +64,10 @@ module.exports = {
         eslint: {
             pattern: /^front\/.*\.js(x)*$/,
             warnOnly: true
+        },
+        cleancss: {
+            specialComments: 0,
+            removeEmpty: true
         },
         jade: {
             staticBasedir: 'front/templates',

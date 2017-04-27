@@ -3,7 +3,8 @@ node_js:
     - node
 
 script:
+    - npm run lint
     - npm run build
 
 after_success:
-    - bash -x update_pages.sh
+    - bash -x ci/update_pages.sh

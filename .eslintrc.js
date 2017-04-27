@@ -2,7 +2,6 @@ module.exports = {
     "extends": ["eslint:recommended", "plugin:inferno/recommended"],
     "rules": {
         "semi": ["error", "always"],
-        "no-console": [0],
         "valid-jsdoc": ["error"],
         "complexity": ["error", 10],
         "consistent-return": "error",
@@ -12,14 +11,17 @@ module.exports = {
         "max-depth": ["error", 5],
         "no-duplicate-imports": "error"
     },
+    "globals": {
+        logger: false
+    },
     "env": {
         "browser": true,
         "node": true,
         "es6": true
     },
     "parserOptions": {
-        "ecmaVersion": 8,
         "sourceType": "module",
+        "ecmaVersion": 8,
         "ecmaFeatures": {
             "modules": true,
             "jsx": true

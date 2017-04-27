@@ -1,38 +1,38 @@
 {
-  "name": "aght-lazy-db",
-  "version": "1.0.0",
-  "author": "Douman",
-  "description": "AGHT codes DB.",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scrap-archive": "node data/scrap.js",
-    "lint": "eslint --ext .jsx --ext .js data/ front/",
-    "start": "brunch watch --server",
-    "build": "brunch build --production"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "inferno": "*",
-    "inferno-component": "*"
-  },
-  "devDependencies": {
-    "eslint": "^3.14.1",
+    "name": "aght-lazy-db",
+    "version": "1.0.0",
+    "author": "Douman",
+    "description": "AGHT codes DB.",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint --ext .jsx --ext .js data/ front/",
+        "start": "brunch watch --server",
+        "build": "brunch build --production"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "inferno": "*",
+        "inferno-component": "*",
+        "inferno-mobx": "*",
+        "mobx": "*"
+    },
+    "devDependencies": {
+        "eslint": "*",
 
-    "eslint-plugin-inferno": "*",
-    "babel-plugin-inferno": "*",
+        "eslint-plugin-inferno": "*",
+        "babel-plugin-inferno": "*",
 
-    "brunch": "*",
-    "jsony-brunch": "*",
-    "autoprefixer-stylus": "*",
-    "babel-brunch": "*",
-    "babel-preset-es2015": "*",
-    "clean-css-brunch": "*",
-    "css-brunch": "*",
-    "eslint-brunch": "*",
-    "jade-brunch": "*",
-    "rollup-brunch": "*",
-    "stylus-brunch": "*",
-    "auto-reload-brunch": "*",
-    "uglify-js-brunch": "*"
-  }
+        "brunch": "*",
+        "jsony-brunch": "*",
+        "autoprefixer-stylus": "*",
+        "babel-brunch": "*",
+        "babel-preset-es2015": "*",
+        "clean-css-brunch": "*",
+        "eslint-brunch": "*",
+        "jade-brunch": "*",
+        "rollup-brunch": "*",
+        "stylus-brunch": "*",
+        "auto-reload-brunch": "*",
+        "uglify-js-brunch": "*"
+    }
 }

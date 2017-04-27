@@ -4,14 +4,18 @@ html(lang="en")
         title="AGHT DB"
         meta(content="text/html;charset=utf-8", http-equiv="Content-Type")
         meta(content="utf-8", http-equiv="encoding")
-        script(src="app.js")
+        link(href='vendor.css', rel='stylesheet')
         link(href='style.css', rel='stylesheet')
+        script(src="app.js")
 body
     main
 
+    script(src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise")
     script.
         require('init')
 
     noscript
-        p(class="center_box").
-            Javascript is disabled. App cannot work :(
+        section
+            p="Javascript is disabled :("
+            p="Please enable it for site to work."
+
