@@ -55,7 +55,7 @@ module.exports = {
     plugins: {
         babel: {
             presets: ['es2015'],
-            plugins: ["inferno"]
+            plugins: ["inferno", "transform-object-rest-spread"]
         },
         stylus: {
             includeCss: true,

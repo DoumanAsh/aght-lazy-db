@@ -21,6 +21,7 @@
 
         "eslint-plugin-inferno": "*",
         "babel-plugin-inferno": "*",
+        "babel-plugin-transform-object-rest-spread": "*",
 
         "brunch": "*",
         "jsony-brunch": "*",
