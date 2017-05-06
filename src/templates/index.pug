@@ -1,0 +1,29 @@
+- var title = "AGHT DB"
+include _common.pug
++head(title)
+
+- var data = require('../../data/db.json')
+- var styles = [require('../styles/main.sss')]
+
+body.main
+    header.sticky
+        span.heading=title
+        input(id="vn_filter" placeholder="VN Title..." type="text")
+    div.main
+        div.flex-table
+            div.flex-row.heading
+                span.cell="Title"
+                span.cell="Company"
+            - var idx = 1;
+            each value, key in data
+                - var classRow = idx % 2 === 0 ? "even" : null
+                - idx += 1
+                div.flex-row(data-code=value.code data-kanji=value.kanji class=classRow)
+                    span.cell=key
+                    span.cell=value.company
+
+    +noscript
+
+    each value in styles
+        style !{value}
+

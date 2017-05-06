@@ -1,5 +1,5 @@
 module.exports = {
-    "extends": ["eslint:recommended", "plugin:inferno/recommended"],
+    "extends": ["eslint:recommended"],
     "rules": {
         "semi": ["error", "always"],
         "valid-jsdoc": ["error"],
@@ -9,14 +9,13 @@ module.exports = {
         "eqeqeq": "error",
         "no-use-before-define": "error",
         "max-depth": ["error", 5],
-        "no-duplicate-imports": "error"
+        "no-duplicate-imports": "error",
+        "compat/compat": 2,
+        "no-console": 1
     },
-    "globals": {
-        logger: false
-    },
+    "plugins": ["compat"],
     "env": {
         "browser": true,
-        "node": true,
         "es6": true
     },
     "parserOptions": {
@@ -25,7 +24,6 @@ module.exports = {
         "ecmaFeatures": {
             "modules": true,
             "experimentalObjectRestSpread": true,
-            "jsx": true
         }
     }
 }

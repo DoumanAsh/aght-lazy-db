@@ -1,0 +1,36 @@
+.flex-table
+    margin: .5em auto
+    display: flex
+    flex-wrap: wrap
+    max-width: 75%
+    font-size: 20px
+    box-shadow: 3px 3px 3px 4px rgba(0, 0, 0, 0.4)
+    border: 1px solid #96a8b2
+
+.flex-row
+    display: flex
+    flex-wrap: wrap
+    flex: 0 0 100%
+    border-bottom: 2px solid #e5eaec
+
+    &.even
+        background: #e5eaec
+
+    &.heading
+        color: white
+        background: #444
+        border-bottom: none
+
+        &:hover
+            background: #444
+            cursor: inherit
+
+    &:hover
+        background: teal
+        cursor: pointer
+
+    & > .cell
+        flex: 1
+        padding: 0.5em
+        text-align: left
+        overflow: auto

@@ -1,39 +1,66 @@
 {
     "name": "aght-lazy-db",
-    "version": "1.0.0",
+    "version": "0.0.1",
+    "description": "AGHT data base",
     "author": "Douman",
-    "description": "AGHT codes DB.",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "lint": "eslint --ext .jsx --ext .js data/ front/",
-        "start": "brunch watch --server",
-        "build": "brunch build --production"
-    },
     "license": "MIT",
+    "repository": "github:DoumanAsh/aght-lazy-db",
+    "scripts": {
+        "lint": "eslint src/ ",
+        "lint:css": "stylelint src/**/*.sss ",
+        "prelint:all": "npm run lint:css",
+        "lint:all": "npm run lint",
+
+        "build": "webpack",
+        "build:p": "webpack -p",
+        "build:profile": "webpack --profile --json > stats.json",
+        "build:analyze": "webpack-bundle-analyzer stats.json",
+        "build:s": "webpack-dev-server"
+    },
     "dependencies": {
-        "inferno": "*",
-        "inferno-component": "*",
-        "inferno-mobx": "*",
-        "mobx": "*"
+        "crel": "*"
     },
     "devDependencies": {
+        "webpack": "*",
+        "webpack-dev-server": "*",
+
+        "html-webpack-plugin": "*",
+        "script-ext-html-webpack-plugin": "*",
+        "pug": "^2.0.0-rc.1",
+        "pug-loader": "*",
+
+        "file-loader": "*",
+        "json5-loader": "*",
+
         "eslint": "*",
+        "eslint-plugin-compat": "*",
+        "eslint-loader": "*",
 
-        "eslint-plugin-inferno": "*",
+        "babel-core": "*",
         "babel-plugin-inferno": "*",
-        "babel-plugin-transform-object-rest-spread": "*",
-
-        "brunch": "*",
-        "jsony-brunch": "*",
-        "autoprefixer-stylus": "*",
-        "babel-brunch": "*",
         "babel-preset-es2015": "*",
-        "clean-css-brunch": "*",
-        "eslint-brunch": "*",
-        "jade-brunch": "*",
-        "rollup-brunch": "*",
-        "stylus-brunch": "*",
-        "auto-reload-brunch": "*",
-        "uglify-js-brunch": "*"
-    }
+        "babel-plugin-transform-object-rest-spread": "*",
+        "babel-loader": "*",
+
+        "css-loader": "*",
+        "postcss-loader": "*",
+        "postcss-import": "*",
+        "postcss-nesting": "*",
+        "sugarss": "*",
+        "stylelint": "*",
+        "stylelint-config-standard": "*",
+        "autoprefixer": "*"
+    },
+
+    "babel": {
+        "presets": [
+            ["es2015", {"modules": false}]
+        ],
+        "plugins": ["transform-object-rest-spread"]
+    },
+
+    "browserslist": [
+        "Last 2 versions",
+        "ie 11"
+    ]
 }

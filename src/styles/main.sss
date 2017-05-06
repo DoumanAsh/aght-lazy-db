@@ -1,0 +1,85 @@
+@import './table.sss'
+
+html,
+body.main
+    overflow: hidden
+    height: 100%
+
+div.main
+    flex: 1
+    height: 90%
+    overflow: auto
+
+header.sticky
+    background-color: #f8f8f8
+    border: 2px solid #e7e7e7
+    padding: 0.5em
+    font-size: 1.5em
+    display: flex
+    justify-content: space-between
+
+    & > *
+        flex: 1
+
+.pop-up
+    position: absolute
+    top: 35%
+    left: 15%
+    display: block
+    width: 70%
+    margin: auto
+    animation: fly-in 1s
+    z-index: 5
+    background-color: #fff
+    box-shadow: 3px 3px 3px 4px rgba(0, 0, 0, 0.5)
+    padding: 0
+    border: 0 solid #96a8b2
+    border-radius: 4px
+    overflow: hidden
+
+    & > *
+        padding: 0.5em
+        font-size: 1.5em
+
+    & > content
+        display: flex
+        justify-content: space-between
+
+    & > header
+        font-size: 2em
+        color: white
+        background: #333
+
+        & > .close
+            background-color: transparent
+            border: 1px solid transparent
+            color: inherit
+            position: absolute
+            right: .5em
+            outline: 0
+            font-size: 1.4em
+            font-weight: 700
+
+            &:hover
+                cursor: pointer
+
+        & > h2
+            max-width: 95%
+            padding: 0
+
+            & > .link
+                margin-left: 1em
+                background: teal
+                text-decoration: none
+                border: none
+                color: #fff
+                display: inline-block
+                padding: .25em .5em
+                border-radius: 4px
+                font-size: .75em
+                font-weight: 700
+                line-height: 1.2
+
+            & > .sub
+                font-size: 0.8em
+                opacity: 0.6

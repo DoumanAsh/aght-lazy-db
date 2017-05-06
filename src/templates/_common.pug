@@ -1,0 +1,16 @@
+- var styles = [require('../styles/common.sss')];
+mixin head(title)
+    doctype html
+    html(lang="en")
+        head
+            title=title
+            meta(content="text/html;charset=utf-8", http-equiv="Content-Type")
+            meta(content="utf-8", http-equiv="encoding")
+            noscript
+                style !{require('../styles/noscript.sss')}
+            each value in styles
+                style !{value}
+mixin noscript
+    noscript.pop-up
+        p="Javascript is disabled :("
+        p="Please enable it for site to work."
