@@ -4,9 +4,15 @@ import crel from 'crel';
 
 let pop = undefined;
 
+function on_close() {
+    const pop_parent = pop.parentNode;
+    pop_parent.removeChild(pop);
+    pop = undefined;
+}
+
 export default function create_pop_up({title, company, kanji, code, notes}) {
     if (pop !== undefined) {
-        pop.children[0].children[0].click();
+        on_close();
     }
 
     pop = crel('div', {class: 'pop-up'});
@@ -18,11 +24,7 @@ export default function create_pop_up({title, company, kanji, code, notes}) {
         )
     );
 
-    header.children[0].addEventListener('click', function() {
-        const pop_parent = pop.parentNode;
-        pop_parent.removeChild(pop);
-        pop = undefined;
-    });
+    header.children[0].addEventListener('click', on_close);
 
     const children = [
         header,
