@@ -1,4 +1,15 @@
 {
+    "Amayui Castle Meister": {
+        "code": "/HS18@71180:AGE.EXE",
+        "kanji": "天結いキャッスルマイスター",
+        "company": "Eushully",
+        "notes": "Interface hook"
+    },
+    "Hanidebi! Honey & Devil": {
+        "code": "/HW-20@FA171:はにデビ.exe",
+        "kanji": "はにデビ！ Honey & Devil",
+        "company": "Eufonie"
+    },
     "Amanatsu Adolesence": {
         "code": "/HWN14*0@53519C",
         "kanji": "甘夏アドゥレセンス",

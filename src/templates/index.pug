@@ -18,7 +18,7 @@ body.main
             each value, key in data
                 - var classRow = idx % 2 === 0 ? "even" : null
                 - idx += 1
-                div.flex-row(data-code=value.code data-kanji=value.kanji class=classRow)
+                div.flex-row(data-code=value.code data-kanji=value.kanji data-notes=value.notes class=classRow)
                     span.cell=key
                     span.cell=value.company
 
